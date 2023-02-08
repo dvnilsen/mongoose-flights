@@ -4,7 +4,7 @@ module.exports = {
   index,
   show,
   new: newFlight,
-  // create
+  create
 };
 
 function index(req, res) {
@@ -23,7 +23,7 @@ function newFlight(req, res) {
   res.render('flights/new', { title: 'Add Flight' });
 }
 
-/* function create(req, res) {
+function create(req, res) {
   // Delete empty properties on req.body for defaults to happen 
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
@@ -34,4 +34,4 @@ function newFlight(req, res) {
     console.log(flight);
     res.redirect('/flights');
   });
-} */ 
+}  

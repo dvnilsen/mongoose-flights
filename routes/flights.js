@@ -11,6 +11,6 @@ router.get('/new', flightsCtrl.new);
 // GET /flights/:id (show functionality)
 router.get('/:id', flightsCtrl.show);
 // POST /flights (create functionality)
-// --> FIX THIS IN CONTROLLERS --> router.post('/', flightsCtrl.create);
+router.post('/', flightsCtrl.create);
 
 module.exports = router;
