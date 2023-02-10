@@ -25,6 +25,7 @@
     <input type="date" name="arrival">
     <input type="submit" value="Add Destination">
 </form> 
+<a href="/flights/<%= flight._id %>/tickets/new"><button>Add Ticket</button></a>
 
 <% if (flight.destinations.length) { %>
     <table>
@@ -46,5 +47,12 @@
   <% } else { %>
     <h5>No Destinations Yet</h5>
   <% } %>
+
+  <% tickets.forEach(function(t) { %>
+    <div>Seat:</div>
+    <div><%= t.seat %></div>
+    <div>Price:</div>
+    <div>$<%= t.price %></div>
+    <% }); %>
 
 <%- include('../partials/footer') %>
